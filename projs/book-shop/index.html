@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="lib/bs4/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body onload="init()">
+
+    <div class="modal">
+    </div>
+    <h1 class="display-4">welcome to my bookshop</h1>
+    
+    <button onclick=" readAndAddNewBook()" class="btn btn-add">add-book</button>
+    <input class="add-book-name" type="text" placeholder="name of the book">
+    <input class="add-book-price" type="text" placeholder="the cost of the book?">
+
+    <table class="table table-sm table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th class="sort" onclick="sortByBookName()" scope="col">Book</th>
+                <th class="sort" onclick="sortByPrice()" scope="col">Price</th>
+                <th scope="col">actions</th>
+            </tr>
+        </thead>
+        <tbody class="tbl">
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="lib/jquery.js"></script>
+    <script src="utils.js"></script>
+    <script src="service-book.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

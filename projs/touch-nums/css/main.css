@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+}
+
+
+html{
+    color: rgb(29, 102, 20);
+    font-size: 62.5%;
+    
+}
+
+.tbl{
+    border: 1px solid green;
+    width: 5rem;
+    height:5rem;
+    text-align: center;
+    
+}
+
+.logo-game{
+    width: 8rem;
+}
+
+.time{
+    margin-left: 3rem;
+}
+
+.logo-game img {
+    position: absolute;
+    top: 2.5rem;
+    left: 3rem;
+    width: 8rem;
+}
+
+table{
+    margin: 0 auto;
+    font-size: 1.8rem;
+    padding: 5rem;
+    cursor: pointer;
+}
+
+td { border-radius: 1rem; }
+
+td:hover{
+    background-color: rgb(214, 212, 186);
+}
+
+.heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, rgb(22, 185, 1),rgb(3, 17, 0));
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 1px 5px 5px rgb(0, 180, 0);
+}
+
+
+.top{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top p, 
+.top h1{ text-align: center; }
+
+
+.top p {
+    padding-right: 3rem;
+    font-size: 1.8rem;
+}
+
+.correct{
+    background-color: lightgreen;
+    opacity: .5;
+    transition: 1s;
+    border: none;
+}
+
+.victory{
+    color: rgb(40, 122, 8);
+    text-shadow: 3px 5px 7px rgb(0, 150, 45);
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.btns{
+    display: flex;
+    justify-content: flex-end;
+    /* width:90rem; */
+    margin: 5rem 10rem;
+}
+
+.btns  > *{
+    border: 0;
+    background: inherit;
+    outline: none;
+    cursor: pointer;
+    color: inherit;
+    backface-visibility: hidden;
+}
+
+.btns > *:not(:last-child) { margin-right: 2rem; }
+
+.btn{
+    font-size: 1.4rem;
+    transition: all .3s;
+    padding-bottom: .4rem;
+    transform: scale(1.2);
+    transition: all .2;
+}
+
+.btn-try-again{
+    font-weight: 800;
+    color: black;
+}
+
+.btn:active{
+    transform: scale(1);
+    text-shadow: 2px 5px 5px rgb(0, 192, 26, .7);
+}
+
+/* table {
+    visibility: hidden;
+    background-image: linear-gradient(rgb(73, 200, 0),rgb(0, 0, 0));
+    border-radius: 1rem;
+    color: white;
+} */
+
+.wrong{
+    animation-name: wrong;
+    animation-duration: .2s;
+    animation-iteration-count: 2;
+}
+
+@keyframes wrong {
+    50%{
+        transform: rotate(20deg)
+    }
+
+    100%{
+        transform: rotate(-20deg)
+    }
+}
+
+.background{
+    position: absolute;
+    top: 5rem;
+    left: 10rem;
+    background-image: linear-gradient(rgb(24, 121, 0),rgba(0,0,0));
+    width: 1rem;
+    height: 1rem;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+
+.test,.test1{
+
+    background-image: linear-gradient(rgba(250,0,0),rgba(0,0,0));
+    width: 300px;
+    height:300px;
+    clip-path: polygon(0 50%, 50% 50%, 50% 30%, 100% 55%, 50% 80%, 50% 60%, 0 60%);
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    left: 60rem;
+    width: 30rem;
+    text-align: center;
+}

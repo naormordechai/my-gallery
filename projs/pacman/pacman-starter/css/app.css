@@ -1,0 +1,99 @@
+
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.formLine {
+  margin:10px;
+  padding:10px;
+  background-color: cornflowerblue;
+}
+
+.box,.box2 {
+  width: 300px;
+  background-image: linear-gradient(to right,rgba(245, 225, 45, 0.5),rgba(0,0,0,0));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-400px);
+  transition: .4s;
+  margin-bottom: 20px;
+}
+
+.box2,.box{
+  width: 300px;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.btn{
+  cursor: pointer;
+  margin-left: 30px;
+  width: 150px;
+  padding: 15px;
+  border-radius: 100px;
+  outline:none;
+  background-color: inherit;
+  border: 2px solid orange;
+  font-family: cursive;
+  transform: scale(1.1);
+  transition: .4s;
+  box-shadow: 2px 2px 5px black;
+}
+
+.back,.back2{
+  transform: translate(-5px);
+  transform:scale(1.1); 
+  transition-timing-function: cubic-bezier(.9,.96,.34,.34);
+}
+
+.back{
+  transition-delay: .6s; 
+}
+
+.btn:active{
+  transform: scale(1);
+}
+
+table{
+  font-size: 18px;
+  border-collapse: collapse;
+  background-image: linear-gradient(to right,rgba(219, 182, 60, 0.842) 40%,
+  rgba(216, 130, 0, 0.897));
+ 
+}
+
+.shake{
+  animation-name: toShake;
+  animation-iteration-count: 2;
+  animation-duration: .3s;
+}
+
+@keyframes toShake{
+    50%{
+        transform: rotate(20deg)
+    }
+
+    100%{
+        transform: rotate(-20deg)
+    }
+}
+
+.boardContainer {
+margin-bottom: 20px;
+}
+
+ .wall{
+   background-image: linear-gradient(to right, rgb(248, 174, 35),
+   rgb(255, 255, 255));
+  width: 40px;
+  height: 20px;
+} 

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pacman</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body onload="init()" onkeydown="movePacman(event)">
+  <header>
+    <h3>Score:
+      <span>0</span>
+    </h3>
+  </header>
+  <div class="boardContainer"></div>
+
+  <script src="js/general.js"></script>
+  <script src="js/tryForEach.js"></script>
+  <script src="js/pacman.js"></script>
+  <script src="js/ghosts.js"></script>
+  <script src="js/game.js"></script>
+  <div class="box">
+    <button class="btn btn-play-again" onclick="playAgain()">Play again</button>
+    <div>Game over</div>
+  </div>
+
+  <div class="box2">
+      <button class="btn btn-play-again2" onclick="playAgain()">Play again</button>
+      <div>victorious</div>
+    </div>
+</body>
+
+</html>
