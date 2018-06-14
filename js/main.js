@@ -1,41 +1,22 @@
 'use strict'
 console.log('Starting up');
 
-var gProjs = [
 
-  {
-    id: 'book-shop',
-    name: 'book-shop',
-    title: 'easy-buy',
-    desc: 'lorem ipsum',
-    publishedAt: Date.now(),
-    labels: ['html-5'],
-    url: 'projs/book-shop/index.html',
-    img: "img/about/book-shop.png"
-  },
-  {
-    id: 'packman',
-    name: 'packman',
-    title: 'game',
-    desc: 'lorem ipsum',
-    publishedAt: Date.now(),
-    labels: ['html-5'],
-    url: 'projs/pacman/pacman-starter/index.html',
-    img: "img/about/packman.png"
-  },
-  {
-    id: 'touch-nums',
-    name: 'touch-nums',
-    title: 'good-game',
-    desc: 'lorem ipsum',
-    publishedAt: Date.now(),
-    labels: ['css'],
-    url: 'projs/touch-nums/index.html',
-    img: "img/about/touch-nums.png"
-  }
+var Proj = function (id, name, desc, publishedAt, url, img) {
+  this.id = id;
+  this.name = name;
+  this.desc = desc;
+  this.publishedAt = publishedAt;
+  this.url = url;
+  this.img = img
+}
 
-];
+var projBookShop = new Proj('book-shop', 'book-shop', 'lorem ipsum', Date.now(), 'projs/book-shop/index.html', 'img/about/book-shop.png')
+var projToucsNums = new Proj('touch-nums', 'touch-nums', 'lorem ipsum', Date.now(), 'projs/touch-nums/index.html', 'img/about/touch-nums.png')
+var projMineSweeper = new Proj('minesweeper', 'minesweeper', 'lorem ipsum', Date.now(), 'projs/minesweeper/index.html', 'img/about/minesweeper.png')
+var projGuessMe = new Proj('guess-me', 'guess-me', 'lorem ipsum', Date.now(), 'projs/guess-me/index.html', 'img/about/guess.png')
 
+var gProjs = [projBookShop, projToucsNums, projMineSweeper,projGuessMe]
 
 
 function renderProjs() {
@@ -76,6 +57,7 @@ function openModal(projId) {
   <h2>${cuurentProj.name}</h2>
   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
   <img class="img-fluid d-block mx-auto" src="${cuurentProj.img}" alt="">
+  <a href = "${cuurentProj.url}"> Click me!</a>
   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis
     dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate,
     maiores repudiandae, nostrum, reiciendis facere nemo!</p>

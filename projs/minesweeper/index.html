@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mine Sweeper</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mine Sweeper</h1>
+        <div class="btns">
+            <button class="btn" onclick="getLevelBeginner()">Beginner</button>
+            <button class="btn" onclick="getLevelMedium()">med</button>
+            <button class="btn" onclick="getLevelExpert()">Expert</button>
+            <button class="btn" onclick="newGame()">New Game</button>
+        </div>
+        <div class="box">
+            <h3>Timer:
+                <span class="timer"></span>
+            </h3>
+            <div class="img-mood">
+                <img src='img/smile.png'>
+            </div>
+        </div>
+        <table>
+            <tbody class="board"></tbody>
+        </table>
+    </div>
+
+    <div class="times">
+        <div>Best time Begginer:
+            <span class="best-time-beginner"></span>
+        </div>
+        <div>Best time Medium:
+            <span class="best-time-medium"></span>
+        </div>
+        <div>Best time Expert:
+            <span class="best-time-expert"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
